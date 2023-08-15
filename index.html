@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Form Test</title>
+</head>
+<body>
+    <h1>Gayness Test: Are you gay?</h1>
+    <p>100% chance of being accurate</p>
+    <p>What is 2+2?</p>
+    <form id="textForm" onsubmit="return checkText()">
+        <input type="text" id="textInput" placeholder="Enter a number or text">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkText() {
+            var inputElement = document.getElementById("textInput");
+            var resultElement = document.getElementById("result");
+            var text = inputElement.value.trim();
+
+            if (text === "4") {
+                resultElement.textContent = "ur gay lol";
+            } else {
+                resultElement.textContent = "ur not gay";
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>
